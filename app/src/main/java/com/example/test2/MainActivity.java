@@ -13,25 +13,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    //plis
     public void plus(View view) {
-        TextView set_view = (TextView) findViewById(R.id.textView1);
-        String countView = new String((set_view.getText()).toString());
+        TextView setView = (TextView) findViewById(R.id.textView1);
+        String countView = new String((setView.getText()).toString());
         if(isNumber(countView) == true) {
-            int mCount = Integer.parseInt(countView);
-            mCount++;
-            set_view.setText(String.valueOf(mCount));
-        }
-    }
-    public void minus(View view) {
-        TextView set_view = (TextView) findViewById(R.id.textView1);
-        String countView = new String((set_view.getText()).toString());
-        if(isNumber(countView) == true) {
-            int mCount = Integer.parseInt(countView);
-            mCount--;
-            set_view.setText(String.valueOf(mCount));
+            int count = Integer.parseInt(countView);
+            count++;
+            setView.setText(String.valueOf(count));
         }
     }
 
+    //minus as a bonus
+    public void minus(View view) {
+        TextView setView = (TextView) findViewById(R.id.textView1);
+        String countView = new String((setView.getText()).toString());
+        if(isNumber(countView) == true) {
+            int count = Integer.parseInt(countView);
+            count--;
+            setView.setText(String.valueOf(count));
+        }
+    }
+
+    //is input number or not?
     private static boolean isNumber(String str) {
         try {
             Integer.parseInt(str);
